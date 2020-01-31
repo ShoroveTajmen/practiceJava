@@ -1,0 +1,234 @@
+Modifier
+--------
+1. Access modifier
+2. No-access modifier
+
+Access Modifier
+---------------
+field -> access
+field -> class r property - variable, method
+1. public
+2. private
+3. protected
+4. default
+
+Non-access modifier
+-----------------------
+
+
+Inheritance
+-----------------
+parent class/ super class
+child class/ sub-class
+
+-> code reusablity
+
+
+
+
+vehicle -> number_plate, brand, wheels
+
+car -> seat_number
+truck -> load_amount
+
+Car c = new Car();
+
+
+Object obj
+|
+XXX
+|
+YYYY
+|
+TTT
+|
+PPP
+.
+.
+Vehicle
+|
+Car
+
+
+
+
+TO DO
+-----------
+1.The this keyword refers to the current object in a method or constructor.This can also be used to:
+   *invoke current class constructor
+   *invoke current class method
+   *return the current class object
+   *pass an argument in the method call
+   *pass an argument in the constructor call
+
+   Example of this keyword:
+   --------------------------
+   public class Area{
+         int length;
+         int width;
+         int area;
+   public Area(int a,int b)
+    {
+      this.length = a;
+      this.width = b;
+    }
+   public void display()
+    {
+      this.area = this.length * this.width;
+      System.out.println("Area:" +this.area);
+
+    }
+   public static void main(String[] args)
+    {
+      Area a1 = new Area();
+      a1.display();
+    }
+    }
+
+
+2.NEW keyword:
+---------------
+* it is used to create the object.
+* it allocates the memory at runtime.
+* all objects occupy memory in the heap area.
+* it invokes the object constructor
+
+Example of new keyword:
+---------------------------
+public class Student {
+
+    void display()
+    {
+        System.out.println("I Am A Student");
+    }
+
+    public static void main(String[] args) {
+        Student s1 = new Student();
+        s1.display();
+    }
+
+}
+
+
+PROTECTED:
+-------------
+The protected keyword is an access modifier used for attributes, methods and constructors,
+making them accessible in the same package and subclasses.
+
+Example of protected:
+------------------------
+class Person {
+  protected String fname = "John";
+  protected String lname = "Doe";
+  protected String email = "john@doe.com";
+  protected int age = 24;
+}
+
+class Student extends Person {
+  private int graduationYear = 2018;
+  public static void main(String[] args) {
+    Student myObj = new Student();
+    System.out.println("Name: " + myObj.fname + " " + myObj.lname);
+    System.out.println("Email: " + myObj.email);
+    System.out.println("Age: " + myObj.age);
+    System.out.println("Graduation Year: " + myObj.graduationYear);
+  }
+}
+
+SUPER:
+--------
+The super keyword refers to the objects of immediate parent class.
+
+* to access the data members of parent class when both parent and child class have member with same name
+* to explicitly call the no-arg and parameterized constructor of parent class
+* to access the method of parent class when child class has overridden that method.
+
+CONSTRUCTOR:
+--------------
+Constructor is an used to create an object and initialize the state/properties of an object.Constructor is same as class name and it has no return type.
+types of constructor:
+--------------------
+1.default constructor
+2.no-arg constructor
+3.parameterized constructor
+
+Default constructor
+-------------------
+class Student
+{
+  String name;
+public Student()
+{
+}
+void display()
+{
+  System.out.println("Name:"+this.name);
+}
+public static void main(String[] args)
+{
+  Student s1 = new Student();
+  s1.display();
+}
+}
+
+No-arg constructor:
+--------------------
+class Student
+{
+  String name;
+public Student()
+{
+  this.name = "xyz";
+}
+void display()
+{
+  System.out.println("Name:"+this.name);
+}
+public static void main(String[] args)
+{
+  Student s1 = new Student();
+  s1.display();
+}
+}
+
+Parameterized:
+---------------
+class Student
+{
+  String name;
+public Student(String n)
+{
+  this.name = n;
+}
+void display()
+{
+  System.out.println("Name:"+this.name);
+}
+public static void main(String[] args)
+{
+  Student s1 = new Student("xyz");
+  s1.display();
+}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
